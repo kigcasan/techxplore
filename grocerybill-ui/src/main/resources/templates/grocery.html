@@ -8,11 +8,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-
 </head>
 <body>
+	<script th:inline="javascript">
+    	document.title = [[${headerTitle}]];
+	</script>
 	<div class="container">
-		<h1 ><span th:text="${clerk.name}"></span> - Grocery Bill</h1><br>
+		<h1><span th:text="${clerk.name}"></span> - Grocery Bill</h1><br>
 		<div class="row col-md-7 table-responsive">
 			<table id="regularBill" class="table">
 				<thead>
@@ -33,11 +35,11 @@
 					</tr>
 				</tbody>
 				<tfooter>
-				<tr th:style="'background-color: lightgray'">
-					<td >Total Regular Bill: </td>
-					<td th:text="${regularBill.totalBill}" colspan="3">123</td>
+					<tr th:style="'background-color: lightgray'">
+						<td >Total Regular Bill: </td>
+						<td th:text="${regularBill.totalBill}" colspan="3">123</td>
+					</tr>
 				</tfooter>
-				</tr>
 			</table>
 		</div>
 		
@@ -68,6 +70,6 @@
 				</tfooter>
 			</table>
 		</div>
-		
+	</div>
 </body>
 </html>

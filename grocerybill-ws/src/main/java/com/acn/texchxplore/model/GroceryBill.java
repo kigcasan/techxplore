@@ -10,6 +10,12 @@ public class GroceryBill {
 	private double totalBill;
 
 	public GroceryBill() {}
+	
+	public GroceryBill(ShoppingClerk clerk, List<Item> itemList, double totalBill) {
+		this.clerk = clerk;
+		this.itemList = itemList;
+		this.totalBill = totalBill;
+	}
 
 	public void setClerk(ShoppingClerk clerk) {
 		this.clerk = clerk;
@@ -18,7 +24,7 @@ public class GroceryBill {
 	public GroceryBill(ShoppingClerk clerk) {
 		this.clerk = clerk;
 	}
-
+	
 	public ShoppingClerk getClerk() {
 		return clerk;
 	}
